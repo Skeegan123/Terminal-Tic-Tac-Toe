@@ -5,6 +5,7 @@
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 using namespace std;
 
 void drawBoard(vector<vector<char>> board) {
@@ -62,6 +63,8 @@ vector<vector<char>> makePlayerMove(vector<vector<char>> board) {
 
 vector<vector<char>> makeCompMove(vector<vector<char>> board) {
     int x, y;
+
+    srand(time(0));
 
     do {
         x = rand() % 3;
