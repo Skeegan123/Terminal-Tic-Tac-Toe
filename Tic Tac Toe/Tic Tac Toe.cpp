@@ -24,6 +24,9 @@ void drawBoard(vector<vector<char>> board) {
 }
 
 bool isValidMove(vector<vector<char>> board, int x, int y) {
+    if (x > 2 || x < 0 || y > 2 || y < 0) {
+        return false;
+    }
     if (board[x][y] == ' ') {
         return true;
     }
